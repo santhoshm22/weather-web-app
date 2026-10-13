@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App with Gemini AI</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="app">
+        <section class="weather-card">
+            <h1>Weather App</h1>
+            <p class="intro">Check the weather in any city.</p>
+
+            <form id="weather-form" class="search">
+                <input
+                    id="city-input"
+                    type="text"
+                    placeholder="Enter city name"
+                    aria-label="City name"
+                    required
+                >
+                <button type="submit" id="search-button">Search</button>
+            </form>
+
+            <p id="weather-status" class="status" role="status"></p>
+
+            <section id="weather-result" class="weather-result" hidden>
+                <img
+                    id="weather-icon"
+                    src="/images/clear.png"
+                    alt="Weather condition"
+                >
+                <h2 id="city-name"></h2>
+                <p id="temperature" class="temperature"></p>
+                <p id="condition"></p>
+
+                <div class="weather-details">
+                    <div>
+                        <span>Humidity</span>
+                        <strong id="humidity"></strong>
+                    </div>
+                    <div>
+                        <span>Wind speed</span>
+                        <strong id="wind"></strong>
+                    </div>
+                    <div>
+                        <span>High / Low</span>
+                        <strong id="high-low"></strong>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="ai-card">
+            <h2>Weather AI Assistant</h2>
+            <p>Ask Gemini to explain the weather you searched for.</p>
+
+            <form id="ai-form" class="ai-input-row">
+                <input
+                    id="ai-question"
+                    type="text"
+                    placeholder="Should I carry an umbrella?"
+                    maxlength="1000"
+                    aria-label="Ask a weather question"
+                    required
+                >
+                <button type="submit" id="ai-button">Ask AI</button>
+            </form>
+
+            <p id="ai-status" class="status" role="status"></p>
+            <div id="ai-answer" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Weather App · Built with JavaScript, Python and Gemini AI</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
